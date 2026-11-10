@@ -1,0 +1,47 @@
+{
+  "name": "dsh-team-v3",
+  "version": "0.1.0",
+  "description": "Team presets for DeepSeek Harness AgentTeams: audit6 / impl5 / lite2 rosters, seed task DAGs, role prompts, and a captain doctrine section so a fresh session opens the right team without a pasted prompt.",
+  "keywords": [
+    "dsh-plugin",
+    "dsh",
+    "agent-teams",
+    "deepseek-harness",
+    "multi-agent",
+    "team-preset"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./profiles.yml": "./profiles.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "cordis.patch.yml",
+    "profiles.yml",
+    "README.md",
+    "README.zh.md",
+    "install.ps1",
+    "install.sh"
+  ],
+  "license": "MIT",
+  "author": "Kippythisway",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kippythisway/dsh-team-v3.git"
+  },
+  "dependencies": {
+    "@nanmicoder/dsh-agent-teams": "^0.1.28"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/schemastery": "*"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
